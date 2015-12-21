@@ -22,6 +22,7 @@ import com.springmvc.mybatis.util.ValueUtil;
  * Handles requests for the application home page.
  */
 @Controller("homeController")
+@RequestMapping("/")
 public class HomeController {
 	
 	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
@@ -45,7 +46,7 @@ public class HomeController {
 //	
 
 	
-	@RequestMapping(value="/",method=RequestMethod.GET)
+	@RequestMapping(method=RequestMethod.GET)
 	public String homePage(){
 		
 		log.info("调用了HomePage方法");
